@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <!-- <h1>Hello World!</h1>
+    {{ name }} from {{place}}
+    <h1>Hello World!</h1>
+    <h1>Hello World!</h1>
+    <h1>Hello World!</h1> -->
+
+    <h1>Enter your Text</h1>
+    <form action="/Analyze_Text" method="post"> {% csrf_token %}
+        <textarea name="text" id="" cols="30" rows="10" width=80%>
+        </textarea><br>
+        <input type="checkbox" name="puncBox" id=""> Remove puncuation <br>
+        <input type="checkbox" name="newLineRemover" id=""> Remove unused new lines <br>
+        <input type="checkbox" name="capitalize" id=""> Capitalizer <br>
+        <input type="checkbox" name="extraSpaceRemover" id=""> Remove extra Spaces <br>
+        <input type="checkbox" name="charCount" id=""> Count the Characters <br>
+        <button type="submit"> Analyze Text </button>
+    </form>
+    
+</body>
+</html>
