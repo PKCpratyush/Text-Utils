@@ -9,7 +9,7 @@ from django.shortcuts import render
 # render have 3 arguments the third one is dictionary
 def index(request):
     pars = {"name": "PKC", "place": "Kateya"}
-    return render(request, 'ind.html',pars)
+    return render(request, 'index.html',pars)
 
 # def about(request):
 #     return HttpResponse("About page")
@@ -25,11 +25,11 @@ def index(request):
 def analyze_text(request):
     # getting the text
     txt = request.POST.get('text','default')
-    check_box_response = request.POST.get('puncBox','off')
-    check_box_response_char_count = request.POST.get('charCount','off')
+    check_box_response = request.POST.get('punc_box','off')
+    check_box_response_char_count = request.POST.get('char_count','off')
     check_box_response_capitalize = request.POST.get('capitalize','off')
-    check_box_response_extra_space_remover = request.POST.get('extraSpaceRemover','off')
-    check_box_response_new_line_remover = request.POST.get('newLineRemover','off')
+    check_box_response_extra_space_remover = request.POST.get('extra_space_remover','off')
+    check_box_response_new_line_remover = request.POST.get('new_line_remover','off')
 
     
     # analyze the text
@@ -86,7 +86,7 @@ def analyze_text(request):
         # return render(request,'txtop.html',{"char_count": char_count})
 
     paras = {"analyzed_text" : txt, "char_count": char_count}
-    return render(request,'txtop.html',paras)
+    return render(request,'analyzed_text.html',paras)
     # return HttpResponse(txt + '<br><a href="/">back</a>')
 
 # def capfirst(request):
